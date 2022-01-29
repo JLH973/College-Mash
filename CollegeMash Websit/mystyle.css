@@ -1,0 +1,21 @@
+body {
+    background-color: lightblue;
+  }
+  
+  h1 {
+    color: navy;
+    margin: 0 auto;
+    width: 700px;
+    text-align: center;
+
+  }
+  div span {
+    text-align: center;
+}
+
+  p {
+      text-align: center;
+  }
+  button {
+      text-align: center;
+  }
