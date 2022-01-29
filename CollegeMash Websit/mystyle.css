@@ -1,21 +1,56 @@
 body {
     background-color: lightblue;
-  }
-  
-  h1 {
+}
+
+h1 {
     color: navy;
     margin: 0 auto;
     width: 700px;
     text-align: center;
+    font-family: Arial;
+}
 
-  }
-  div span {
+#picker {
+    text-align: center;
+    padding-left: 40vw;
+    padding-right: 40vw;
+}
+
+#pickerScore {
+    text-align: center;
+    padding-left: 40vw;
+    padding-right: 40vw;
+}
+
+#pickerPics {
+    padding-left: 35vw;
+    padding-right: 40vw;
+}
+
+#pickerButtons {
+    padding-left: 40vw;
+    padding-right: 40vw;
+}
+
+#pic1Label {
+    width: auto;
+    height: 10vw;
+}
+
+#pic2Label {
+    width: auto;
+    height: 10vw;
+}
+
+p {
     text-align: center;
 }
 
-  p {
-      text-align: center;
-  }
-  button {
-      text-align: center;
-  }
+button {
+    text-align: center;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+}
