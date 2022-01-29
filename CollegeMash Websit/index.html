@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="mystyle.css">
-        <script src="script.js" ></script>
-    </head>        
-    <body>
-        <h1 style="font-family: Arial"><center>CollegeMash: Pick Your Favorite College!</center></h1>
-       
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <style>
-            h1 {text-align: center;}
-            div {text-align: center;}
-            </style>
-        <div id="picker">
 
-           
-                <span class="name1Label">College 1 Name&nbsp&nbsp&nbsp</span>
-                <span class="name2Label">College 2 Name</span>
-       
+<head>
+    <link rel="stylesheet" href="mystyle.css">
+    <script src="script.js"></script>
+</head>
 
-        
-                <span class="score1Label">College 1 Score&nbsp&nbsp&nbsp</span>
-                <span class="score2Label">College 2 Score</span>
-           
-           
-                <span id="pic1Label">College 1 Pic&nbsp&nbsp&nbsp</span>
-                <span id="pic2Label">College 2 Pic</span>
-            
-        
-                <button onclick="changeText1()">Choose College 1</button>
-                <button onclick="changeText2()">Choose College 2</button>
-            
-        </div>
-       
-    </body>
+<body>
+    <h1>
+        CollegeMash: Pick Your Favorite College!
+    </h1>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div id="picker">
+        <span class="labels">
+            <p class="name1Label">College 1 Name</p>
+            <p class="name2Label">College 2 Name</p>
+        </span>
+    </div>
+    <div id="pickerScore">
+        <span class="labels">
+            <p class="score1Label">College 1 Score</p>
+            <p class="score2Label">College 2 Score</p>
+        </span>
+    </div>
+    <div id="pickerPics">
+        <span class="labels">
+            <img id="pic1Label"src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Michigan_Wolverines_logo.svg/1280px-Michigan_Wolverines_logo.svg.png"/>
+            <img id="pic2Label"src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Stanford_Cardinal_logo.svg/1200px-Stanford_Cardinal_logo.svg.png"/>
+        </span>
+    </div>
+    <div id="pickerButtons">
+        <button onclick="changeText1()">Choose College 1</button>
+        <button onclick="changeText2()">Choose College 2</button>
+
+    </div>
+
+</body>
 
 </html>
