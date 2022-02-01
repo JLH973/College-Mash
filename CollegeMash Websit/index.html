@@ -3,13 +3,11 @@
 
 <head>
     <link rel="stylesheet" href="mystyle.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <h1>
-        CollegeMash: Pick Your Favorite College!
-    </h1>
+    <h1>CollegeMash: Pick Your Favorite College!</h1>
 
     <br>
     <br>
@@ -17,30 +15,32 @@
     <br>
     <br>
 
+    <table id="sortingTable">
 
-    <div id="picker">
-        <span class="labels">
-            <p class="name1Label">College 1 Name</p>
-            <p class="name2Label">College 2 Name</p>
-        </span>
-    </div>
-    <div id="pickerScore">
-        <span class="labels">
-            <p class="score1Label">College 1 Score</p>
-            <p class="score2Label">College 2 Score</p>
-        </span>
-    </div>
-    <div id="pickerPics">
-        <span class="labels">
-            <img id="pic1Label"src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Michigan_Wolverines_logo.svg/1280px-Michigan_Wolverines_logo.svg.png"/>
-            <img id="pic2Label"src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Stanford_Cardinal_logo.svg/1200px-Stanford_Cardinal_logo.svg.png"/>
-        </span>
-    </div>
-    <div id="pickerButtons">
-        <button onclick="changeText1()">Choose College 1</button>
-        <button onclick="changeText2()">Choose College 2</button>
+        <tr id="picker">
+            <td class="name1Label">College 1 Name</td>
+            <td class="name2Label">College 2 Name</td>
+        </tr>
 
-    </div>
+
+        <tr id="pickerScore">
+            <td class="score1Label">College 1 Score</td>
+            <td class="score2Label">College 2 Score</td>
+        </tr>
+
+
+        <tr id="pickerPics">
+            <td><img id="pic1Label" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Michigan_Wolverines_logo.svg/1280px-Michigan_Wolverines_logo.svg.png" /></td>
+            <td><img id="pic2Label" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Stanford_Cardinal_logo.svg/1200px-Stanford_Cardinal_logo.svg.png" /></td>
+        </tr>
+
+
+        <tr id="pickerButtons">
+            <td><button onclick="changeText1()">Choose This College</button></td>
+            <td><button onclick="changeText2()">Choose This College</button></td>
+        </tr>
+
+    </table>
 
 </body>
 
