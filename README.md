@@ -1,4 +1,4 @@
 # College-Mash
 compare two colleges, pick your favorite. 
-uses a elo rating algorithm to change rankings based on your pick and the current scores. 
-see how your rankings stack up with a real time leaderboard(in progress). 
+Uses a elo rating algorithm to change rankings based on your pick and the current scores. 
+See how your rankings stack up against your friends' with a real time leaderboard(in progress). 
