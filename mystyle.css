@@ -54,3 +54,8 @@ button {
     display: flex;
     justify-content: space-between;
 }
+a {
+    text-align: center;
+    padding-left: 36vw;
+    padding-right: 30vw;
+}
