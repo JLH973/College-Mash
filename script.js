@@ -6,6 +6,9 @@ const images = ["https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Michi
 
 let rand1 = Math.floor(Math.random() * names.length);
 let rand2 = Math.floor(Math.random() * names.length);
+if(rand1 === rand2){
+    rand2 = Math.floor(Math.random() * names.length);
+}
 /*let name1txt = names[rand1];
 let name2txt = names[rand2];*/
 
