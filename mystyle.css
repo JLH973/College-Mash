@@ -33,12 +33,12 @@ h1 {
 }
 
 #pic1Label {
-    width: auto;
+    width: 10vw;
     height: 10vw;
 }
 
 #pic2Label {
-    width: auto;
+    width: 10vw;
     height: 10vw;
 }
 
@@ -48,6 +48,9 @@ p {
 
 button {
     text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .labels {
@@ -59,3 +62,4 @@ a {
     padding-left: 36vw;
     padding-right: 30vw;
 }
+
