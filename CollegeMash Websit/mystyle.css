@@ -10,27 +10,47 @@ h1 {
     font-family: Arial;
 }
 
-table {
-    width: 50%;
-    display: block;
-    margin-left: 40vw;
-    margin-right: 40vw;
-}
-
-td img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 10vw;
-    max-height: 10vw;
-}
-
-td button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-td {
+#picker {
     text-align: center;
+    padding-left: 40vw;
+    padding-right: 40vw;
+}
+
+#pickerScore {
+    text-align: center;
+    padding-left: 40vw;
+    padding-right: 40vw;
+}
+
+#pickerPics {
+    padding-left: 35vw;
+    padding-right: 40vw;
+}
+
+#pickerButtons {
+    padding-left: 40vw;
+    padding-right: 40vw;
+}
+
+#pic1Label {
+    width: auto;
+    height: 10vw;
+}
+
+#pic2Label {
+    width: auto;
+    height: 10vw;
+}
+
+p {
+    text-align: center;
+}
+
+button {
+    text-align: center;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
 }
