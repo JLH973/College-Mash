@@ -9,11 +9,15 @@ let rand2 = Math.floor(Math.random() * names.length);
 /*let name1txt = names[rand1];
 let name2txt = names[rand2];*/
 
+
 function changeText1() {
+    let txt = document.getElementById("start");
+    txt.innerHTML = "";
     let name1txt = document.getElementById("picker").getElementsByClassName("name1Label")[0];
     let name2txt = document.getElementById("picker").getElementsByClassName("name2Label")[0];
     rand1 = Math.floor(Math.random() * names.length);
     rand2 = Math.floor(Math.random() * names.length);
+    
     name1txt.innerHTML = names[rand1];
     name2txt.innerHTML = names[rand2];
 
@@ -22,6 +26,8 @@ function changeText1() {
 }
 
 function changeText2() {
+    let txt = document.getElementById("start");
+    txt.innerHTML = "";
     let name1txt = document.getElementById("picker").getElementsByClassName("name1Label")[0];
     let name2txt = document.getElementById("picker").getElementsByClassName("name2Label")[0];
     rand1 = Math.floor(Math.random() * names.length);
