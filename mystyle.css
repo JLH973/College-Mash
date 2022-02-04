@@ -1,17 +1,20 @@
 body {
-    background-color: lightblue;
+    background-color: rgb(189, 88, 88);
 }
 
 h1 {
-    color: navy;
+    color: whitesmoke;
     margin: 0 auto;
-    width: 700px;
+    width: 1400px;
+    height: 37px;
     text-align: center;
     font-family: Arial;
+    background-color: black;
 }
 
 #picker {
     text-align: center;
+    font-size: larger;
     padding-left: 40vw;
     padding-right: 40vw;
 }
@@ -33,13 +36,13 @@ h1 {
 }
 
 #pic1Label {
-    width: 10vw;
-    height: 10vw;
+    width: 15vw;
+    height: 15vw;
 }
 
 #pic2Label {
-    width: 10vw;
-    height: 10vw;
+    width: 15vw;
+    height: 15vw;
 }
 
 p {
