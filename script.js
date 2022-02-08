@@ -9,9 +9,6 @@ let rand2 = Math.floor(Math.random() * names.length);
 while(rand1 === rand2){
     rand2 = Math.floor(Math.random() * names.length);
 }
-/*let name1txt = names[rand1];
-let name2txt = names[rand2];*/
-
 
 function changeText1() {
     let txt = document.getElementById("start");
