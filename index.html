@@ -52,6 +52,50 @@
     <br>
     <br>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLScg31Fr2QssQSffbbTyda3ObwNMG67ywmYH73urI1-sPq6KxA/viewform?usp=sf_link "> Suggest any colleges you want to see on the site here!</a>
+    
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-analytics.js";
+
+        
+        // this is broken
+        import  { database } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js";
+        
+        
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCurYkYgfts9cvhhT4323tayTDs84eUjic",
+          authDomain: "college-mash-b2c21.firebaseapp.com",
+          projectId: "college-mash-b2c21",
+          storageBucket: "college-mash-b2c21.appspot.com",
+          messagingSenderId: "73802291241",
+          appId: "1:73802291241:web:99ba3cae16c21c4d092438",
+          measurementId: "G-LGZ2RE30C5"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        let id = "123";
+        let data = {};
+        data["message"] = "Hello";
+        firebase.database().ref('text/'+id).set(data,function(error) {
+            if(error) {
+                console.log(error);
+            } else {
+                alert("success")
+            }
+        })
+      </script>
+
+      
 </body>
 
 </html>
+
