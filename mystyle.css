@@ -65,4 +65,44 @@ a {
     padding-left: 36vw;
     padding-right: 30vw;
 }
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid lightblue;
+    background-color: lightblue;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: rgb(164, 213, 230);
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color:rgb(157, 209, 226);
+  }
+h2 {
+    text-align: center;
+    font-family: Arial;
+}
+table {
+     padding-left: 550px; 
+}
+td {
+    text-align: center;
+}
 
+#Rank {
+    padding-right: 10px;
+}
