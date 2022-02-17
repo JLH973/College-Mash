@@ -68,4 +68,33 @@ function openTab(evt, tabName) {
   
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
-  }
+}
+
+function addTable() {
+
+    for (var a=0; a < 20; a++) {
+        var table1 = document.getElementById('xxx');
+        var rowrow =  document.createElement('tr');
+    
+        for ( i=0; i < 1; i++) {
+            var cell1  =  document.createElement('td');
+            var text1 = document.createTextNode(names[a]);
+            
+            var cell2  =  document.createElement('td');
+            var text2 = document.createTextNode(a+1);
+
+            var cell3  =  document.createElement('td');
+            var text3 = document.createTextNode(scores[a]);
+
+            cell1.appendChild(text1);
+            rowrow.appendChild(cell1);
+
+            cell2.appendChild(text2);
+            rowrow.appendChild(cell2);
+
+            cell3.appendChild(text3);
+            rowrow.appendChild(cell3);
+        }
+        table1.appendChild(rowrow);
+    }
+}
