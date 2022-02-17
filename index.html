@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="mystyle.css">
     <script src="script.js"></script>
+    <link rel="shortcut icon" href="file:///Users/humphreysj/Downloads/College-Mash-main/college-mash-logo-_1_.ico">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
     <br>
 <div class="tab">
     <button class="tablinks" onclick="openTab(event, 'Picker')">Picker</button>
-    <button class="tablinks" onclick="openTab(event, 'LB')">Leaderboard</button>
+    <button class="tablinks" onclick="openTab(event, 'LB') + addTable()" >Leaderboard</button>
 </div>
 <div id="Picker" class="tabcontent">
     <div id="picker">
@@ -76,33 +77,6 @@
       </tbody>
   </table>
 
-  <script>
-      for (var a=0; a < 2; a++) {
-          var table1 = document.getElementById('xxx');
-          var rowrow =  document.createElement('tr');
-      
-          for ( i=0; i <1; i++) {
-              var cell1  =  document.createElement('td');
-              var text1 = document.createTextNode('test1'+a);
-              
-              var cell2  =  document.createElement('td');
-              var text2 = document.createTextNode('test2'+a);
-
-              var cell3  =  document.createElement('td');
-              var text3 = document.createTextNode('test3'+a);
-
-              cell1.appendChild(text1);
-              rowrow.appendChild(cell1);
-
-              cell2.appendChild(text2);
-              rowrow.appendChild(cell2);
-
-              cell3.appendChild(text3);
-              rowrow.appendChild(cell3);
-          }
-          table1.appendChild(rowrow);
-      }
-  </script>
   </div>
 
     
