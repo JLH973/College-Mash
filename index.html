@@ -7,6 +7,7 @@
 </head>
 
 <body>
+  <title>CollegeMash</title>
     <h1>
         CollegeMash: Pick Your Favorite College!
     </h1>
@@ -14,7 +15,6 @@
     <br>
     <br>
     <br>
-    <!-- Tab links -->
 <div class="tab">
     <button class="tablinks" onclick="openCity(event, 'London')">Picker</button>
     <button class="tablinks" onclick="openCity(event, 'Paris')">Leaderboard</button>
@@ -62,63 +62,47 @@
 </div>
 <div id="Paris" class="tabcontent">
     <h2>Leaderboard</h2>
-    <table>
-        <tr>
-          <th>School</th>
-          <th id="Rank">Rank</th>
-          <th>Score</th>
-        </tr>
-        <tr>
-          <td>Stanford University</td>
-          <td>1</td>
-          <td>-44</td>
-        </tr>
-        <tr>
-          <td>Stanford University</td>
-          <td>2</td>
-          <td>-44</td>
-        </tr>
-        <tr>
-            <td>Stanford University</td>
-            <td>3</td>
-            <td>-44</td>
-          </tr>
+
+    <table class = "lb" cellspacing="5" >
+      <thead>
           <tr>
-            <td>Stanford University</td>
-            <td>4</td>
-            <td>-44</td>
+              <td>School</td>
+              <td>Rank</td>
+              <td>Score</td>
           </tr>
-          <tr>
-            <td>Stanford University</td>
-            <td>5</td>
-            <td>-44</td>
-          </tr>
-          <tr>
-            <td>Stanford University</td>
-            <td>6</td>
-            <td>-44</td>
-          </tr>
-          <tr>
-            <td>Stanford University</td>
-            <td>7</td>
-            <td>-44</td>
-          </tr>
-          <tr>
-            <td>Stanford University</td>
-            <td>8</td>
-            <td>-44</td>
-          </tr>
-          <tr>
-            <td>Stanford University</td>
-            <td>9</td>
-            <td>-44</td>
-          </tr>
-          <tr>
-            <td>Stanford University</td>
-            <td>10</td>
-            <td>-44</td>
-          </tr>
-      </table>
+      </thead>
+      <tbody id="xxx">
+
+      </tbody>
+  </table>
+
+  <script>
+      for (var a=0; a < 2; a++) {
+          var table1 = document.getElementById('xxx');
+          var rowrow =  document.createElement('tr');
+      
+          for ( i=0; i <1; i++) {
+              var cell1  =  document.createElement('td');
+              var text1 = document.createTextNode('test1'+a);
+              
+              var cell2  =  document.createElement('td');
+              var text2 = document.createTextNode('test2'+a);
+
+              var cell3  =  document.createElement('td');
+              var text3 = document.createTextNode('test3'+a);
+
+              cell1.appendChild(text1);
+              rowrow.appendChild(cell1);
+
+              cell2.appendChild(text2);
+              rowrow.appendChild(cell2);
+
+              cell3.appendChild(text3);
+              rowrow.appendChild(cell3);
+          }
+          table1.appendChild(rowrow);
+      }
+  </script>
   </div>
 
     
