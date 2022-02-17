@@ -96,13 +96,10 @@ h2 {
     text-align: center;
     font-family: Arial;
 }
-table {
-     padding-left: 550px; 
-}
 td {
     text-align: center;
 }
-
-#Rank {
-    padding-right: 10px;
+.lb {
+    margin-left: auto;
+    margin-right: auto;
 }
