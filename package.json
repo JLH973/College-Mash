@@ -1,0 +1,12 @@
+{
+  "name": "college-mash",
+  "version": "1.0.0",
+  "description": "Compare two colleges, pick your favorite.  Uses an ELO rating algorithm to change rankings based on your pick and the current scores.  See how your rankings stack up against your friends' with a real time leaderboard(in progress).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
