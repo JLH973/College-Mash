@@ -4,7 +4,7 @@
 <head>
     <link rel="stylesheet" href="mystyle.css">
     <script src="script.js"></script>
-    <link rel="shortcut icon" href="file:///Users/humphreysj/Downloads/College-Mash-main/college-mash-logo-_1_.ico">
+    <link rel="shortcut icon" href="file:///Users/humphreysj/Downloads/College-Mash-main/logo.png">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
     <br>
 <div class="tab">
     <button class="tablinks" onclick="openTab(event, 'Picker')">Picker</button>
-    <button class="tablinks" onclick="openTab(event, 'LB') + addTable()" >Leaderboard</button>
+    <button class="tablinks" onclick="openTab(event, 'LB'); addTable();" >Leaderboard</button>
 </div>
 <div id="Picker" class="tabcontent">
     <div id="picker">
@@ -56,20 +56,19 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLScg31Fr2QssQSffbbTyda3ObwNMG67ywmYH73urI1-sPq6KxA/viewform?usp=sf_link "> Suggest any colleges you want to see on the site here!</a>
 </div>
 </div>
 <div id="LB" class="tabcontent">
-    <h2>Leaderboard</h2>
+   
+    <h2 id="lbTitle"></h2>
 
     <table class = "lb" cellspacing="5" >
       <thead>
           <tr>
-              <td>School</td>
-              <td>Rank</td>
-              <td>Score</td>
+              <td id="S"><u></u></td>
+              <td id="R"><u></u></td>
+              <td id="Sc"><u></u></td>
           </tr>
       </thead>
       <tbody id="xxx">
