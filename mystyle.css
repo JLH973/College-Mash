@@ -91,6 +91,7 @@ a {
 h2 {
     text-align: center;
     font-family: Arial;
+    margin-top: -50px;
 }
 td {
     text-align: center;
@@ -98,4 +99,5 @@ td {
 .lb {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 500px;
 }
