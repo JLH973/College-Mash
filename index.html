@@ -76,14 +76,14 @@
   </div>
 
     
+       <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
     <script type="module">
         // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-analytics.js";
+        //import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+        //import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-analytics.js";
 
         
-        // this is broken
-        import  { database } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js";
+        //import { getDatabase, ref, set } from "firebase/database";
         
         
         // TODO: Add SDKs for Firebase products that you want to use
@@ -98,23 +98,21 @@
           storageBucket: "college-mash-b2c21.appspot.com",
           messagingSenderId: "73802291241",
           appId: "1:73802291241:web:99ba3cae16c21c4d092438",
-          measurementId: "G-LGZ2RE30C5"
+          measurementId: "G-LGZ2RE30C5",
+          databaseURL: "https://college-mash-b2c21-default-rtdb.firebaseio.com/"
         };
       
         // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
+        const app = firebase.initializeApp(firebaseConfig);
 
-        let id = "123";
-        let data = {};
-        data["message"] = "Hello";
-        firebase.database().ref('text/'+id).set(data,function(error) {
-            if(error) {
-                console.log(error);
-            } else {
-                alert("success")
-            }
-        })
+        console.log("before");
+        var ref = firebase.database().ref();
+
+        ref.on("value", function(snapshot) {
+        console.log(snapshot.val());
+        }, function (error) {
+        console.log("Error: " + error.code);
+        });
       </script>
 
       
