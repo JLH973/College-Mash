@@ -89,7 +89,6 @@ a {
   }
 h2 {
     text-align: center;
-    font-family: Arial;
     margin-top: -50px;
 }
 td {
@@ -97,7 +96,7 @@ td {
 }
 .lb {
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 38vw;
     margin-bottom: 500px;
 }
 .tablinks {
