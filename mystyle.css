@@ -62,8 +62,8 @@ button {
 }
 a {
     text-align: center;
-    padding-left: 40vw;
-    padding-right: 30vw;
+    padding-left: 520px;
+    padding-right: auto;
 }
 .tab {
     border: 1px solid lightblue;
