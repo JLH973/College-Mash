@@ -79,7 +79,7 @@
   </div>
 
     
-  <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
   <script type="module">
       // Import the functions you need from the SDKs you need
       //import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
@@ -108,14 +108,7 @@
       // Initialize Firebase
       const app = firebase.initializeApp(firebaseConfig);
 
-      console.log("before");
-      var ref = firebase.database().ref();
-
-      ref.on("value", function(snapshot) {
-      console.log(snapshot.val());
-      }, function (error) {
-      console.log("Error: " + error.code);
-      });
+      database();
     </script>
 
       
