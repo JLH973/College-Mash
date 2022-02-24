@@ -4,7 +4,7 @@
 <head>
     <link rel="stylesheet" href="mystyle.css">
     <script src="script.js"></script>
-    <link rel="shortcut icon" href="file:///Users/humphreysj/Downloads/College-Mash-main/logo.png">
+    <link rel="shortcut icon" href="logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
@@ -15,7 +15,6 @@
     <h1>
         CollegeMash: Pick Your Favorite College!
     </h1>
-
     <br>
     <br>
     <br>
@@ -79,7 +78,7 @@
   </div>
 
     
-<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
   <script type="module">
       // Import the functions you need from the SDKs you need
       //import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
@@ -108,7 +107,14 @@
       // Initialize Firebase
       const app = firebase.initializeApp(firebaseConfig);
 
-      database();
+      console.log("before");
+      var ref = firebase.database().ref();
+
+      ref.on("value", function(snapshot) {
+      console.log(snapshot.val());
+      }, function (error) {
+      console.log("Error: " + error.code);
+      });
     </script>
 
       
