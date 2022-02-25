@@ -1,4 +1,4 @@
-
+function algTest() {
 let scoreA = -18;
 let scoreB = 100;
 let k = 10;
@@ -16,3 +16,4 @@ console.log("A wins: A:" + parseInt(AwinCalcA));
 console.log("\tB: " + parseInt(AwinCalcB));
 console.log("B wins: A:" + parseInt(BwinCalcA));
 console.log("\tB: " + parseInt(BwinCalcB));
+}
