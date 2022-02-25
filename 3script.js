@@ -20,7 +20,8 @@ function database(command) {
 let runTable = 1;
 let rand1 = Math.floor(Math.random() * names.length);
 let rand2 = Math.floor(Math.random() * names.length);
-while(rand1 === rand2){
+while(rand1 == rand2){
+    if (rand1 == rand2)
     rand2 = Math.floor(Math.random() * names.length);
 }
 
