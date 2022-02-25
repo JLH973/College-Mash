@@ -1,23 +1,24 @@
-
-		int numA = -18;
-		int numB = 100;
-		double k = 10;
-		
-		System.out.println("Original: "+numA);
-		System.out.println("Original: "+numB);
-		
-		double Qa = Math.pow(10,(numA/400.0));
-		double Qb = Math.pow(10,(numB/400.0));
-		
-		double Bexpect = Qa / (Qa + Qb);
-		double Aexpect = Qb / (Qa + Qb);
-		
-		double AwinCalcA = numA - k*(1 - Aexpect);
-		double AwinCalcB = numB - k*(0 - Bexpect);
-		double BwinCalcA = numA - k*(0 - Aexpect);
-		double BwinCalcB = numB - k*(1 - Bexpect);
-		
-		System.out.println("A wins: A:" + (int)AwinCalcA);
-		System.out.println("	B: "+ (int)AwinCalcB);	
-		System.out.println("B wins: A:" + (int)BwinCalcA);
-		System.out.println("	B: "+ (int)BwinCalcB);
+class algTest
+{
+    static main(args)
+    {
+        var numA = -18;
+        var numB = 100;
+        var k = 10;
+        console.log("Original: " + numA);
+        console.log("Original: " + numB);
+        var Qa = Math.pow(10,(numA / 400.0));
+        var Qb = Math.pow(10,(numB / 400.0));
+        var Bexpect = Qa / (Qa + Qb);
+        var Aexpect = Qb / (Qa + Qb);
+        var AwinCalcA = numA - k * (1 - Aexpect);
+        var AwinCalcB = numB - k * (0 - Bexpect);
+        var BwinCalcA = numA - k * (0 - Aexpect);
+        var BwinCalcB = numB - k * (1 - Bexpect);
+        console.log("A wins: A:" + parseInt(AwinCalcA));
+        console.log("\tB: " + parseInt(AwinCalcB));
+        console.log("B wins: A:" + parseInt(BwinCalcA));
+        console.log("\tB: " + parseInt(BwinCalcB));
+    }
+}
+algTest.main([]);
