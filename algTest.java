@@ -1,8 +1,4 @@
-package algTest;
 
-public class AlgTest {
-	
-	public static void main(String [] args) {
 		int numA = -18;
 		int numB = 100;
 		double k = 10;
@@ -25,5 +21,3 @@ public class AlgTest {
 		System.out.println("	B: "+ (int)AwinCalcB);	
 		System.out.println("B wins: A:" + (int)BwinCalcA);
 		System.out.println("	B: "+ (int)BwinCalcB);
-	}
-}
