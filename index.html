@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="mystyle.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="shortcut icon" href="logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -107,8 +107,11 @@
       // Initialize Firebase
       const app = firebase.initializeApp(firebaseConfig);
 
-      database();
-      prep_arrays();
+      database(false);
+      window.addEventListener('load', function() {
+        prep_arrays();
+      });
+
     </script>
 
       
