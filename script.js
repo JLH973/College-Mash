@@ -10,9 +10,7 @@ function database(reset_originals=false) {
 
         for(let i = 0; i < names.length; i++) {
             mainRef.update ({
-                [names[i]]: {
-                rating: scores[i]
-                }
+                [names[i]]: scores[i]
             });
         }
     }
@@ -33,31 +31,73 @@ function prep_arrays() {
     var ref = firebase.database().ref();
     ref.on("value", function(snapshot) {
         let object = snapshot.val()["colleges"];
+        console.log(object);
         for (let prop in object) {
-            console.log(prop);
-            let index = names.indexOf(prop.rating);
-            scores[index] = object[prop.rating];
+            let index = names.indexOf(prop);
+            scores[index] = object[prop];
         }
-        console.log(scores);
     }, function (error) {
         console.log("Error: " + error.code);
-    });
+    });   
+}
 
-    
+function update_database_value(name, score) {
+    var mainRef = firebase.database().ref("colleges/");
+    mainRef.update ({
+        [name]: score
+    });
+}
+
+function getKeyByValue(object, value) {
+    return Object.keys(object).find(key => object[key] === value);
 }
 
 let runTable = 1;
 let rand1 = Math.floor(Math.random() * names.length);
 let rand2 = Math.floor(Math.random() * names.length);
 while(rand1 == rand2){
-    if (rand1 == rand2){
-    while (rand2 == rand1) {
-    rand2 = Math.floor(Math.random() * names.length);
-    }
+    if (rand1 == rand2) {
+        while (rand2 == rand1) {
+            rand2 = Math.floor(Math.random() * names.length);
+        }
     }
 }
 
+// Show 1 groups of colleges before start
+let txt = document.getElementById("start");
+txt.innerHTML = "";
+let name1txt = document.getElementById("picker").getElementsByClassName("name1Label")[0];
+let name2txt = document.getElementById("picker").getElementsByClassName("name2Label")[0];
+rand1 = Math.floor(Math.random() * names.length);
+rand2 = Math.floor(Math.random() * names.length);
+setScore(rand1, rand2);
+setImages(rand1, rand2);
+
+name1txt.innerHTML = names[rand1];
+name2txt.innerHTML = names[rand2];
+
+
 function changeText1() {
+    // update arrays to current scores
+    prep_arrays();
+
+    let scoreA = scores[rand1];
+    let scoreB = scores[rand2];
+    let k = 10;
+
+    let Qa = Math.pow(10,(scoreA / 400.0));
+    let Qb = Math.pow(10,(scoreB / 400.0));
+
+    let Bexpect = Qa / (Qa + Qb);
+    let Aexpect = Qb / (Qa + Qb);
+
+    let AwinCalcA = scoreA - k * (1 - Aexpect);
+    let AwinCalcB = scoreB - k * (0 - Bexpect);
+    
+    update_database_value(names[rand1], String(Math.trunc(AwinCalcA)));
+    update_database_value(names[rand2], String(Math.trunc(AwinCalcB)));
+
+
     let txt = document.getElementById("start");
     txt.innerHTML = "";
     let name1txt = document.getElementById("picker").getElementsByClassName("name1Label")[0];
@@ -73,6 +113,25 @@ function changeText1() {
 }
 
 function changeText2() {
+    // update arrays to current scores
+    prep_arrays();
+
+    let scoreA = scores[rand1];
+    let scoreB = scores[rand2];
+    let k = 10;
+
+    let Qa = Math.pow(10,(scoreA / 400.0));
+    let Qb = Math.pow(10,(scoreB / 400.0));
+
+    let Bexpect = Qa / (Qa + Qb);
+    let Aexpect = Qb / (Qa + Qb);
+
+    let BwinCalcA = scoreA - k * (0 - Aexpect);
+    let BwinCalcB = scoreB - k * (1 - Bexpect);
+
+    update_database_value(names[rand1], String(Math.trunc(BwinCalcA)));
+    update_database_value(names[rand2], String(Math.trunc(BwinCalcB)));
+
     let txt = document.getElementById("start");
     txt.innerHTML = "";
     let name1txt = document.getElementById("picker").getElementsByClassName("name1Label")[0];
@@ -84,6 +143,9 @@ function changeText2() {
 
     setScore(rand1, rand2);
     setImages(rand1, rand2);
+    
+
+    
 
 }
 
@@ -119,30 +181,45 @@ function openTab(evt, tabName) {
 
 function addTable() {
     if (runTable == 0){
-    return;
-}
-let lbTitle = document.getElementById("lbTitle");
-lbTitle.innerHTML = "Leaderboard";
-let school = document.getElementById("S");
-S.innerHTML = "<u><b>School</b></u>";
-let rank = document.getElementById("R");
-R.innerHTML = "<u><b>Rank</b></u>";
-let score = document.getElementById("Sc");
-Sc.innerHTML = "<u><b>Score</b></u>";
+        return;
+    }
 
-    for (var a=0; a < 20; a++) {
+    document.getElementById("xxx").innerHTML = "";
+
+    let object;
+    var ref = firebase.database().ref();
+    ref.on("value", function(snapshot) {
+        object = snapshot.val()["colleges"];
+        console.log(object);
+    }, function (error) {
+        console.log("Error: " + error.code);
+    });
+
+    let entries = Object.entries(object);
+    let sorted = entries.sort((a, b) => a[1] - b[1]);
+
+    let lbTitle = document.getElementById("lbTitle");
+    lbTitle.innerHTML = "Leaderboard";
+    let school = document.getElementById("S");
+    S.innerHTML = "<u><b>School</b></u>";
+    let rank = document.getElementById("R");
+    R.innerHTML = "<u><b>Rank</b></u>";
+    let score = document.getElementById("Sc");
+    Sc.innerHTML = "<u><b>Score</b></u>";
+
+    for (var a=0; a < 50; a++) {
         var table1 = document.getElementById('xxx');
         var rowrow =  document.createElement('tr');
     
         for ( i=0; i < 1; i++) {
             var cell1  =  document.createElement('td');
-            var text1 = document.createTextNode(names[a]);
+            var text1 = document.createTextNode(sorted[a][0]);
             
             var cell2  =  document.createElement('td');
             var text2 = document.createTextNode(a+1);
 
             var cell3  =  document.createElement('td');
-            var text3 = document.createTextNode(scores[a]);
+            var text3 = document.createTextNode(sorted[a][1]);
 
             cell1.appendChild(text1);
             rowrow.appendChild(cell1);
@@ -155,5 +232,4 @@ Sc.innerHTML = "<u><b>Score</b></u>";
         }
         table1.appendChild(rowrow);
     }
-    runTable = 0;
 }
